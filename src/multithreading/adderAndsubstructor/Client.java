@@ -10,12 +10,14 @@ public class Client {
         Thread t1 = new Thread(adder);
         Thread t2 = new Thread(substractor);
 
+       // System.out.println("Enter to thread t1");
         t1.start();
+       // System.out.println("Enter to thread t2");
         t2.start();
 
-      /*  t1.join();
-        t2.join();
-*/
+       t1.join();
+       t2.join();
+
         System.out.println("The final value is : " + count.value);
 
     }
